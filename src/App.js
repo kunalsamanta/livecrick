@@ -18,10 +18,11 @@ useEffect(()=>{
 
   return (
     <div className="App">
+      
      <Navbar></Navbar>
-
+     <h1>welcome to my live Cricket App </h1>
      <MyCard></MyCard>
-       <h2> hello</h2>
+       
        <Button variant="outlined"
   onClick={() => {
     alert('clicked');
