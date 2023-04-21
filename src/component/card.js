@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-const MyCard= ()=>{
+const MyCard= ({ match })=>{
     const getMyCart=()=>{
         return(
             <Card>
