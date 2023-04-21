@@ -1,11 +1,20 @@
+import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 
-const navBar= () => {
+const Navbar= () => {
     return(
+        <AppBar position="static">
+            <Toolbar>
+                <IconButton color="inherit"> 
+                    <MenuIcon />
+                </IconButton>
+                <Typography variant="h6">Live Score</Typography>
+            </Toolbar>
+        </AppBar>
         
-        <h1>this is nav bar</h1>
+    
     )
 
-
 }
-export default navBar;
+export default Navbar;
