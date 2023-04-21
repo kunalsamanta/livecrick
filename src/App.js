@@ -12,9 +12,10 @@ function App() {
 
 
   const [matches, setMatches]=useState([]);
+
 useEffect(()=>{
  getMatches()
- .then((data)=>setMatches(data.matches))
+ .then((data)=>{console.log(data);setMatches(data.matches);})
  .catch(error=>alert("could not load data"));
 
 },[]);
@@ -31,6 +32,7 @@ useEffect(()=>{
             {matches.map((match) => (
               <MyCard match={match}></MyCard>
             ))}
+            
           </Grid>
         </Grid>
       </Container>
