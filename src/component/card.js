@@ -15,7 +15,7 @@ const MyCard= ()=>{
                         <Grid item>
                            <img 
                            style={{width:85}}
-                           src={require("../img/vs.jpg")} />
+                           src={require("../img/vs.jpg")}  alt=""/>
                         </Grid>
                         <Grid item> 
                             <Typography variant="h5">Second Team</Typography>
