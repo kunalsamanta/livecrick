@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Button } from "@mui/material";
+//import { Button } from "@mui/material";
 import Navbar from './component/navbar';
 import { getMatches } from './api/Api';
 import MyCard from './component/card';
-import { Container, Grid, Typography }from "@mui/material";
+import { Container, Grid, }from "@mui/material";
 
 
 
@@ -15,7 +15,7 @@ function App() {
 
 useEffect(()=>{
  getMatches()
- .then((data)=>{console.log(data);setMatches(data.matches);})
+ .then((data)=>{console.log("Data",data);setMatches(data.data);})
  .catch(error=>alert("could not load data"));
 
 },[]);
