@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import './App.css';
 //import { Button } from "@mui/material";
 import Navbar from './component/navbar';
@@ -16,7 +16,7 @@ function App() {
 useEffect(()=>{
  getMatches()
  .then((data)=>{console.log("Data",data);setMatches(data.data);})
- .catch(error=>alert("could not load data"));
+ .catch(error =>alert("could not load data"));
 
 },[]);
 
@@ -30,7 +30,9 @@ useEffect(()=>{
         <Grid container>
           <Grid item xs={12}>
             {matches.map((match) => (
-              <MyCard match={match}></MyCard>
+              <Fragment key={match.unique_id}>
+                {match.matchType === "t20"? (<MyCard key={match.unique_id} match={match}></MyCard>):("")}
+              </Fragment>
             ))}
             
           </Grid>
